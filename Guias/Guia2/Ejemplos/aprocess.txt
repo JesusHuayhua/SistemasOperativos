@@ -1,0 +1,141 @@
+systemd-+-ModemManager---3*[{ModemManager}]
+        |-NetworkManager---3*[{NetworkManager}]
+        |-abrt-dbus---3*[{abrt-dbus}]
+        |-3*[abrt-dump-journ]
+        |-abrtd---3*[{abrtd}]
+        |-accounts-daemon---3*[{accounts-daemon}]
+        |-alsactl
+        |-auditd---{auditd}
+        |-avahi-daemon---avahi-daemon
+        |-bluetoothd
+        |-chronyd
+        |-colord---3*[{colord}]
+        |-cupsd
+        |-dbus-broker-lau---dbus-broker
+        |-firewalld---{firewalld}
+        |-gdm-+-gdm-session-wor-+-gdm-wayland-ses-+-gnome-session-b---4*[{gnome-session-b}]
+        |     |                 |                 `-3*[{gdm-wayland-ses}]
+        |     |                 `-3*[{gdm-session-wor}]
+        |     `-3*[{gdm}]
+        |-gnome-keyring-d---4*[{gnome-keyring-d}]
+        |-gssproxy---5*[{gssproxy}]
+        |-low-memory-moni---3*[{low-memory-moni}]
+        |-mcelog
+        |-passimd---3*[{passimd}]
+        |-pcscd---19*[{pcscd}]
+        |-polkitd---3*[{polkitd}]
+        |-power-profiles----3*[{power-profiles-}]
+        |-rtkit-daemon---2*[{rtkit-daemon}]
+        |-sssd_kcm
+        |-switcheroo-cont---3*[{switcheroo-cont}]
+        |-systemd-+-(sd-pam)
+        |         |-abrt-applet---4*[{abrt-applet}]
+        |         |-at-spi-bus-laun-+-dbus-broker-lau---dbus-broker
+        |         |                 `-4*[{at-spi-bus-laun}]
+        |         |-at-spi2-registr---3*[{at-spi2-registr}]
+        |         |-chrome_crashpad---2*[{chrome_crashpad}]
+        |         |-code-+-code---code---16*[{code}]
+        |         |      |-code---code---code---18*[{code}]
+        |         |      |-code---8*[{code}]
+        |         |      |-code---14*[{code}]
+        |         |      |-code---16*[{code}]
+        |         |      |-code-+-code---7*[{code}]
+        |         |      |      `-14*[{code}]
+        |         |      |-code-+-2*[bash]
+        |         |      |      `-16*[{code}]
+        |         |      `-40*[{code}]
+        |         |-dbus-broker-lau---dbus-broker
+        |         |-dconf-service---3*[{dconf-service}]
+        |         |-ejemplo01---sh---pstree
+        |         |-evolution-addre---6*[{evolution-addre}]
+        |         |-evolution-calen---9*[{evolution-calen}]
+        |         |-evolution-sourc---4*[{evolution-sourc}]
+        |         |-flatpak-session---3*[{flatpak-session}]
+        |         |-2*[gjs---11*[{gjs}]]
+        |         |-gnome-calendar---7*[{gnome-calendar}]
+        |         |-gnome-session-b-+-evolution-alarm---8*[{evolution-alarm}]
+        |         |                 |-gnome-software---9*[{gnome-software}]
+        |         |                 |-gsd-disk-utilit---3*[{gsd-disk-utilit}]
+        |         |                 `-4*[{gnome-session-b}]
+        |         |-gnome-session-c---{gnome-session-c}
+        |         |-gnome-shell-+-Xwayland---4*[{Xwayland}]
+        |         |             |-firefox-+-Isolated Web Co---31*[{Isolated Web Co}]
+        |         |             |         |-3*[Isolated Web Co---26*[{Isolated Web Co}]]
+        |         |             |         |-Isolated Web Co---27*[{Isolated Web Co}]
+        |         |             |         |-Isolated Web Co---28*[{Isolated Web Co}]
+        |         |             |         |-Privileged Cont---27*[{Privileged Cont}]
+        |         |             |         |-RDD Process---4*[{RDD Process}]
+        |         |             |         |-Socket Process---5*[{Socket Process}]
+        |         |             |         |-Utility Process---4*[{Utility Process}]
+        |         |             |         |-3*[Web Content---18*[{Web Content}]]
+        |         |             |         |-WebExtensions---27*[{WebExtensions}]
+        |         |             |         |-file:// Content---27*[{file:// Content}]
+        |         |             |         `-116*[{firefox}]
+        |         |             |-mono---5*[{mono}]
+        |         |             |-mutter-x11-fram---9*[{mutter-x11-fram}]
+        |         |             `-24*[{gnome-shell}]
+        |         |-gnome-shell-cal---6*[{gnome-shell-cal}]
+        |         |-goa-daemon---4*[{goa-daemon}]
+        |         |-goa-identity-se---4*[{goa-identity-se}]
+        |         |-gsd-a11y-settin---4*[{gsd-a11y-settin}]
+        |         |-gsd-color---5*[{gsd-color}]
+        |         |-gsd-datetime---4*[{gsd-datetime}]
+        |         |-gsd-housekeepin---4*[{gsd-housekeepin}]
+        |         |-gsd-keyboard---5*[{gsd-keyboard}]
+        |         |-gsd-media-keys---5*[{gsd-media-keys}]
+        |         |-gsd-power---6*[{gsd-power}]
+        |         |-gsd-print-notif---3*[{gsd-print-notif}]
+        |         |-gsd-printer---3*[{gsd-printer}]
+        |         |-gsd-rfkill---3*[{gsd-rfkill}]
+        |         |-gsd-screensaver---3*[{gsd-screensaver}]
+        |         |-gsd-sharing---4*[{gsd-sharing}]
+        |         |-gsd-smartcard---4*[{gsd-smartcard}]
+        |         |-gsd-sound---4*[{gsd-sound}]
+        |         |-gsd-usb-protect---4*[{gsd-usb-protect}]
+        |         |-gsd-wacom---5*[{gsd-wacom}]
+        |         |-gsd-xsettings---7*[{gsd-xsettings}]
+        |         |-gvfs-afc-volume---4*[{gvfs-afc-volume}]
+        |         |-gvfs-goa-volume---3*[{gvfs-goa-volume}]
+        |         |-gvfs-gphoto2-vo---3*[{gvfs-gphoto2-vo}]
+        |         |-gvfs-mtp-volume---3*[{gvfs-mtp-volume}]
+        |         |-gvfs-udisks2-vo---4*[{gvfs-udisks2-vo}]
+        |         |-gvfsd-+-gvfsd-dnssd---3*[{gvfsd-dnssd}]
+        |         |       |-gvfsd-network---4*[{gvfsd-network}]
+        |         |       |-gvfsd-trash---4*[{gvfsd-trash}]
+        |         |       |-gvfsd-wsdd-+-wsdd
+        |         |       |            `-3*[{gvfsd-wsdd}]
+        |         |       `-3*[{gvfsd}]
+        |         |-gvfsd-fuse---6*[{gvfsd-fuse}]
+        |         |-gvfsd-metadata---3*[{gvfsd-metadata}]
+        |         |-ibus-daemon-+-ibus-dconf---4*[{ibus-dconf}]
+        |         |             |-ibus-engine-sim---3*[{ibus-engine-sim}]
+        |         |             |-ibus-extension----5*[{ibus-extension-}]
+        |         |             |-python3---5*[{python3}]
+        |         |             `-3*[{ibus-daemon}]
+        |         |-ibus-portal---3*[{ibus-portal}]
+        |         |-ibus-x11---4*[{ibus-x11}]
+        |         |-obexd
+        |         |-p11-kit-server
+        |         |-pipewire---2*[{pipewire}]
+        |         |-pipewire-pulse---2*[{pipewire-pulse}]
+        |         |-tracker-miner-f---7*[{tracker-miner-f}]
+        |         |-uresourced---4*[{uresourced}]
+        |         |-wireplumber---5*[{wireplumber}]
+        |         |-xdg-desktop-por---7*[{xdg-desktop-por}]
+        |         |-2*[xdg-desktop-por---5*[{xdg-desktop-por}]]
+        |         |-xdg-document-po-+-fusermount3
+        |         |                 `-7*[{xdg-document-po}]
+        |         `-xdg-permission----3*[{xdg-permission-}]
+        |-systemd-homed
+        |-systemd-journal
+        |-systemd-logind
+        |-systemd-machine
+        |-systemd-oomd
+        |-systemd-resolve
+        |-systemd-udevd
+        |-systemd-userdbd---3*[systemd-userwor]
+        |-thermald---4*[{thermald}]
+        |-udisksd---5*[{udisksd}]
+        |-upowerd---3*[{upowerd}]
+        |-uresourced---3*[{uresourced}]
+        `-wpa_supplicant
