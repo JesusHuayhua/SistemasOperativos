@@ -1,0 +1,45 @@
+#+TITLE: Simulador de Procesos
+#+AUTHOR: Jesus Huayhua
+#+OPTIONS: TOC:3
+
+* Table of Contents :toc:
+
+* Politicas de planificación
+
+Las políticas de planificación que se van a utilizar durante el laboratorio son:
+- First Come First Serve (FCFS)
+- Shortest Job First (SIF)
+- Shortes Remaining Time First (SRTF)
+- Round Robin
+- Prioridades
+- Prioridades Expulsivas
+- Prioridades expulsivas + Round Robin
+
+** Descripcion del Programa
+
+Para que el trabajo funcione correctamente, se va a utilizar
+fichero con extensión **.def**.
+
+El programa solo tiene implementado 3 políticas:
+- FCFS
+- SIF
+- Prioridades fijas sin expulsión
+
+** Simbolos del cronograma
+
+Los rectángulos de colores representan el tiempo que una tarea está
+utilizando determinado recurso.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
