@@ -1,0 +1,19 @@
+			Empezando con la funcion is_prime():
+- Unicamente  me esta devolviendo que el numero es mayor a 1, no me verifica si el numero a analizar es primo o no.
+- Esta usando la variable $n1 para realizar la verificacion, cuando deberia de ser $num, ya que es el numero que se esta pasando a la funcion.
+--------------------------------------------------------------------------------------------
+-Se usa: `i=$1`, pero esta variable no se utiliza en ningun momento del codigo.
+
+--------------------------------------------------------------------------------------------
+			DENTRO DEL WHILE
+
+
+El enunciado nos menciona, que el tercer argumento es el digito que deberia de contener los numeros entre $n1 y $n2, pero este no se esta utilizando.
+
+
+- Se usa la variable $patron, el cual no fue declarado antes por lo tanto no tiene valor.
+- La variable $cont, no esta siendo actualizada para poder ir avanzando entre los digitos del numero
+- El llamado a la funcion, no es correto este no tiene que estar contenido entre ningun tipo de llave, corchete o parentesis.
+if is_prime $n1 ; then
+...
+fi
