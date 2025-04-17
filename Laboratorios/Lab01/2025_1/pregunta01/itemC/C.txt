@@ -1,0 +1,15 @@
+i) Sin parametros
+
+Para ambos archivos, como se tiene la validacion de que si o si se tienen que recibir 3 parametros, no se presento ningun error.
+
+ii) Con un parametro
+
+Al igual que el anterior item, no se presenta error puesto que existe dicha clausula para que el programa pueda funcioanr.
+
+iii)  Con los siguientes argumentos: 73939100 73939134 0
+
+Para el 1er script: Number_v1.sh: La validacion que se tiene para la comprobacion de si un numero es primo o no, es que este solo recorre hasta la raiz cuadrada del numero que se le paso como parametro
+
+Para el 2do script: Number_v2.sh: La validacion que se tiene para la comprobacion de si un numero es primo o no, es que este solo recorre hasta la mitad de dicho numero(number/2).
+
+Adicionalmente si usamos el comando time para ver su tiempo, se ve que el 1er archivo es mucho mas rapido que el 2do archivo, esto lo puede comprobar con el script ejecutable.sh

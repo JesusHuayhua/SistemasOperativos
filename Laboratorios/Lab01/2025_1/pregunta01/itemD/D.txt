@@ -1,0 +1,31 @@
+i) 
+
+Para el ejemplo del enunciado, se puede ver que el tiempo que demoro fue de 0,544s.
+Mientras que en mi 1er script me salieron los siguientes valores:
+
+real	0m0,093s
+user	0m0,050s
+sys	0m0,054s
+
+Y para el 2do script me salieron los siguiente valores:
+
+real	0m46,225s
+user	0m46,224s
+sys	0m0,001s
+
+Como se puede comprar, el 1er script si tuvo un tiempo inferior al primero esto porque al tener que verificar
+que si el numero es primo o no, unicamente se tuvo que realizar hasta su raiz cuadra, haciendo que los numeros a validar sean muchos menores.
+
+Mientras que en el 2do script, se tuvo que validar hasta la mitad del numero, lo que hizo que el tiempo creciara exponencialmente.
+
+ii)
+
+En base a la informacion de man 7 time.
+
+El tiempo real, es todo el tiempo que demoro en ejecutar sel programa desde que inicio hasta que termino.
+El tiempo user, es el tiempo que el programa se ejecuto en modo usuario.
+El tiempo sys, es el tiempo que el programa se ejecuto en modo de superusuario.
+
+Aqui, se puede tener que 1, el Sistema Operativo ejecute de forma paralela partes de nuestro codigo para ahorrar tiempo, generar interrupciones al programa, el tiempo que se demora en entrar a modo superusuario y el tiempo que demora en salir de este.
+Por dicho motivo, es que el tiempo real no puede ser igual a la suma del tiempo en user + sys.
+
