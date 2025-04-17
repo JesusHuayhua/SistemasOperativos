@@ -1,0 +1,5 @@
+Como lo mencione anteriormente (1A.txt) el sistema operativo por 
+motivos de seguridad no se puede matar a los procesos que el Sistema Operativo
+utiliza para su correcto funcionamiento.
+Por lo tanto, va a terminar matando al proceso que lo intento, por eso el mensaje de:
+    Terminado (killed)

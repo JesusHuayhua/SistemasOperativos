@@ -1,0 +1,63 @@
+El codigo mostrado en 1.c es incorrecto por lo siguientes motivos:
+
+1) Nos menciona que esta generando una cadena de procesos, cuando en si esta generando
+un abanico de procesos.
+
+Esto lo podemos corrobar con el siguiente fragmento de codigo:
+
+else if(pid == 0){
+    // Estamos en el hijo
+    break;
+}
+
+Cuando se ejecute la sentencia anteriormente mencionada, en los procesos hijos, 
+van a detener el ciclo for.
+
+Entonces quedaria algo similar a lo siguiente:
+
+Padre
+|----- hijo1
+|----- hijo2
+|----- hijo3
+|----- hijo4
+|----- hijo5
+|----- hijo6
+|----- hijo7
+|----- hijo8
+
+En vez de lo siguiente:
+
+Padre
+|----- hijo1 |----- hijo11 |----- hijo111 |----- hijo1111 |----- hijo11111 |----- hijo111111 |----- hijo1111111 |----- hijo11111111
+
+
+para la linea 37 del programa 1.c
+Aqui en efecto entra solo el hijo, pero tiene un defecto al momento de matar a los
+hijos, esto se debe a que su arreglo de pid_hijos[N] completa solo se almacena en el Padre
+no en el hijo1, ni en el hijo 2 o los demas hijos.
+
+Por lo tanto, cuando el hijo1 mande a llamar a la funcion kill(pid_hijos[j],SIGKILL);
+va a mandar a mantar al proceso con pid_hijos[0] = 0(o cualquier basura que que le ponga el SO, normalmente es 0)
+
+Y como no podemos matar a la raiz por obvias razones, se va a matar solito
+esto posiblemente por una medida de seguridad de que el Sistema Operativo
+ya que no podemos matar a los procesos que utiliza el sistema operativo para su correcto
+funcionamiento.
+
+Para comprobrar todo lo anteriormente mencionado,
+se agregaron las siguientes lineas de codigo:
+
+En la linea 22:
+} else if (pid == 0) {
+    // Estamos en el hijo
+    printf("Soy el proceso con PID(%d)\n",(int)getpid());
+    printf("El valor de i del proceso con PID(%d) cuando sale es: %d \n",getpid(),i);
+    break;
+} else {
+
+En la linea 40:
+
+for(int k = 0; k < N; k ++){
+    fprintf(stderr,"\nEl valor de los PIDS[%d]: %d\n",k,pid_hijos[k]);
+}
+
